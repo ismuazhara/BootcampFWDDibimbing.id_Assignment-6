@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Assignment 6-Tailwind CSS</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            }
+        
+</style>
+<body class="bg-stone-100 text-stone-800 min-h-screen">
+    <nav class="bg-stone-900 text-stone-100 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 md:h-20">
+            <div class="flex items-center gap-3">
+                <a href="#" class="flex items-center gap-2.5 group">
+                    <div class="w-10 h-10 rounded-xl bg-amber-600 flex items-center justify-center text-white shadow-md group-hover:bg-amber-500 transition">
+                        <i data-lucide="coffee" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-extrabold text-xl tracking-tight text-white group-hover:text-amber-400 transition">
+                        Coffee<span class="text-amber-500">.Break</span>
+                    </span>
+                </a>
+            </div>
+            
+
+            <div class="hidden md:flex items-center gap-1 lg:gap-2">
+                    <a href="#" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-stone-300 hover:text-amber-400 hover:bg-stone-800 transition">
+                        <i data-lucide="utensils-crossed" class="w-4 h-4 text-amber-500"></i>
+                        <span>Menu</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-stone-300 hover:text-amber-400 hover:bg-stone-800 transition relative">
+                        <i data-lucide="shopping-bag" class="w-4 h-4 text-amber-500"></i>
+                        <span>Keranjang</span>
+                        <span class="bg-amber-600 text-white text-[10px] font-bold px-1.5 py-0.2 rounded-full">2</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-stone-300 hover:text-amber-400 hover:bg-stone-800 transition">
+                        <i data-lucide="truck" class="w-4 h-4 text-amber-500"></i>
+                        <span>Pengiriman</span>
+                    </a>
+                     <a href="#" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-stone-300 hover:text-amber-400 hover:bg-stone-800 transition">
+                        <i data-lucide="receipt" class="w-4 h-4 text-amber-500"></i>
+                        <span>Riwayat Pesanan</span>
+                    </a>
+           </div>
+           
+           <div class="hidden md:flex items-center gap-2">
+                    <a href="#" class="px-4 py-2 text-sm font-semibold text-stone-300 hover:text-white hover:bg-stone-800 rounded-lg transition">
+                        Masuk
+                    </a>
+                    <a href="#" class="px-4 py-2 text-sm font-bold text-stone-900 bg-amber-500 hover:bg-amber-400 rounded-lg shadow transition">
+                        Daftar
+                    </a>
+           </div>
+        </div>
+
+           <div class="md:hidden flex items-center">
+                    <button id="mobileMenuBtn" class="p-2 rounded-lg text-stone-300 hover:text-white hover:bg-stone-800 focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+            </div>
+        </div>
+    
+        <div id="mobileMenu" class="hidden md:hidden bg-stone-900 border-t border-stone-800 px-4 pt-2 pb-4 space-y-2">
+            
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-stone-200 hover:bg-stone-800">
+                <i data-lucide="utensils-crossed" class="w-4 h-4 text-amber-500"></i>
+                <span>Menu</span>
+            </a>
+
+            <a href="#" class="flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium text-stone-200 hover:bg-stone-800">
+                <div class="flex items-center gap-3">
+                    <i data-lucide="shopping-bag" class="w-4 h-4 text-amber-500"></i>
+                    <span>Keranjang</span>
+                </div>
+                <span class="bg-amber-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">2</span>
+            </a>
+
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-stone-200 hover:bg-stone-800">
+                <i data-lucide="truck" class="w-4 h-4 text-amber-500"></i>
+                <span>Pengiriman</span>
+            </a>
+
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-stone-200 hover:bg-stone-800">
+                <i data-lucide="receipt" class="w-4 h-4 text-amber-500"></i>
+                <span>Riwayat Pesanan</span>
+            </a>
+
+            <div class="border-t border-stone-800 pt-3 flex flex-col gap-2">
+                <a href="#" class="w-full text-center py-2 text-sm font-semibold text-stone-300 border border-stone-700 rounded-lg hover:bg-stone-800">
+                    Masuk
+                </a>
+                <a href="#" class="w-full text-center py-2 text-sm font-bold text-stone-900 bg-amber-500 rounded-lg hover:bg-amber-400">
+                    Daftar
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold mb-6">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Kopi Seduh Pilihan Hari Ini
+        </div>
+        <h1 class="text-3xl md:text-5xl font-extrabold text-stone-900 mb-4 leading-tight">
+            Istirahat Sejenak Bersama <span class="text-amber-600">Coffee.Break</span>
+        </h1>
+        <p class="text-stone-600 max-w-xl mx-auto text-sm md:text-base mb-8">
+            Nikmati aroma biji kopi pilihan nusantara yang diseduh segar setiap hari. Pesan online sekarang dan lacak pengiriman langsung ke tempat Anda!
+        </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-left max-w-4xl mx-auto">
+            
+            <div class="bg-white p-4 rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition">
+                <div class="w-full h-40 bg-stone-100 rounded-xl mb-4 flex items-center justify-center text-4xl">☕</div>
+                <h3 class="font-bold text-stone-900 text-base">Americano</h3>
+                <p class="text-xs text-stone-500 mb-3">cita rasa khas nusantara.</p>
+                <div class="flex items-center justify-between">
+                    <span class="font-extrabold text-amber-700 text-sm">Rp 15.000</span>
+                    <button class="p-2 bg-stone-900 text-white rounded-lg hover:bg-amber-600 transition">
+                        <i data-lucide="plus" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white p-4 rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition">
+                <div class="w-full h-40 bg-stone-100 rounded-xl mb-4 flex items-center justify-center text-4xl">🥛</div>
+                <h3 class="font-bold text-stone-900 text-base">Kopi Susu Gula Aren</h3>
+                <p class="text-xs text-stone-500 mb-3">Manisnya gula aren dicampur dengan pahitnya espresso.</p>
+                <div class="flex items-center justify-between">
+                    <span class="font-extrabold text-amber-700 text-sm">Rp 20.000</span>
+                    <button class="p-2 bg-stone-900 text-white rounded-lg hover:bg-amber-600 transition">
+                        <i data-lucide="plus" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white p-4 rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition">
+                <div class="w-full h-40 bg-stone-100 rounded-xl mb-4 flex items-center justify-center text-4xl">🥐</div>
+                <h3 class="font-bold text-stone-900 text-base">Butter Croissant</h3>
+                <p class="text-xs text-stone-500 mb-3">Renyah di luar, lembut di dalam.</p>
+                <div class="flex items-center justify-between">
+                    <span class="font-extrabold text-amber-700 text-sm">Rp 25.000</span>
+                    <button class="p-2 bg-stone-900 text-white rounded-lg hover:bg-amber-600 transition">
+                        <i data-lucide="plus" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', function() {
+            // Menambah/menghapus class 'hidden' saat tombol diklik
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+            <div class="border-t border-stone-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
+                <p>© 2026 Coffee.Break Indonesia. Seluruh Hak Cipta Dilindungi.</p>
+                <div class="flex items-center gap-4">
+                    <a href="#" class="hover:text-stone-300 transition">Privasi</a>
+                    <span>•</span>
+                    <a href="#" class="hover:text-stone-300 transition">Syarat & Ketentuan</a>
+                    <span>•</span>
+                    <a href="#" class="hover:text-stone-300 transition">Peta Situs</a>
+                </div>
+            </div>
+
+
+</body>
+</html>
